@@ -1,4 +1,4 @@
-Install the following dependencies in your environment:
+Install the following dependencies in your environment:  
 pdfminer.six  
 langchain_core  
 fitz  
