@@ -1,0 +1,165 @@
+examples:
+  - path_to_gcs: gs://poc-genai/few_shot_examples/016_period_details.png
+    parsed_text_uri: gs://poc-genai/few_shot_examples/016_output.json
+    output:
+      text: |
+        | PLANES Y SERVICIOS 04/05 al 03/06 | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Bonificación Movistar Móvil 15GB | 0,00 | 10.599,99 | -10.599,99 |
+        | Movistar Móvil 15GB (El plan incluye servicio de datos por $ 32412,55 s/imp) | 39.392,51 |  | 39.392,51 |
+        | total | 39.392,51 | 10.599,99 | 28.792,52 |
+
+
+        | CONSUMOS VARIABLES AL 17/04 | CANTIDAD | DURACION TASADA | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Llamadas |  |  |  |  |  |
+        | Minutos incluidas multidestino |  | 162:00 | 0,00 |  | 0,00 |
+        | Minutos incluidas comunidad |  | 053:00 | 0,00 |  | 0,00 |
+        | Minutos excedentes sin cargo |  | 012:00 | 0,00 |  | 0,00 |
+        | Internet |  |  |  |  |  |
+        | Internet Incluido- en GB | 16,744 |  | 0,00 |  | 0,00 |
+        | Internet nacional incluido | 0,000 |  | 0,00 |  | 0,00 |
+        | Mensajes |  |  |  |  |  |
+        | SMS Nacional incluído | 2 |  | 0,00 |  | 0,00 |
+        | total | | | 0,00 | | 0,00 |
+
+
+        | CARGOS POR UNICA VEZ | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | reconexión del servicio x falta de pago | 1.936,27 |  | 1.936,27 |
+        | total | 1.936,27 |  | 1.936,27 |
+
+
+        | CARGOS A LA CUENTA | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Interes por mora | 1.567,01 |  | 1.567,01 |
+        | total | 1.567,01 |  | 1.567,01 |
+
+
+        | IMPUESTOS | IMPORTE | BONIFICACION | TOTAL |
+        | Ley 27.430 Impuestos Internos 5,2631%|  | 5,26 | 89,73 |
+        | total |  |  | 89,73 |
+
+
+        | Total cargos del período| $32.315,80 |
+
+        | Detalle del Resumen de Cuenta | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Saldo Anterior |  |  | 47.040,96 |
+        | Pagos |  |  |  |
+        | Pago 10/04/2024 |  | -300,00 |  |
+        | Pago 19/03/2024 |  | -23.543,12 |  |
+        | Subtotal |  | | -23.843,12 |
+
+
+        | Total a Pagar | $55.583,37 |
+
+  - path_to_gcs: gs://poc-genai/few_shot_examples/839_period_details.png
+    parsed_text_uri: gs://poc-genai/few_shot_examples/839_output.json
+    output:
+      text: |
+        | PLANES Y SERVICIOS 18/06 al 17/07 | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Bonificación Movistar Móvil 15GB | 0,00 | 12.599,99 | -12.599,99 |
+        | Movistar Móvil 15GB (El plan incluye servicio de datos por $ 38569,58 s/imp) | 46.842,51 |  | 46.842,51 |
+        | total | 46.842,51 | 12.599,99 | 34.242,52 |
+
+
+        | CONSUMOS VARIABLES AL 17/04 | CANTIDAD | DURACION TASADA | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Llamadas |  |  |  |  |  |
+        | Minutos incluidas comunidad |  | 075:00 | 0,00 |  | 0,00 |
+        | Minutos incluidas multidestino |  | 173:00 | 0,00 |  | 0,00 |
+        | Internet |  |  |  |  |  |
+        | Internet sin cargo - en GB | 0,000 |  | 0,00 |  | 0,00 |
+        | Internet Incluido- en GB | 16,883 |  | 0,00 |  | 0,00 |
+        | Mensajes |  |  |  |  |  |
+        | SMS Nacional incluído | 2 |  | 0,00 |  | 0,00 |
+        | total | | | 0,00 | | 0,00 |
+
+
+        | IMPUESTOS | IMPORTE | BONIFICACION | TOTAL |
+        | Ley 27.430 Impuestos Internos 5,2631%|  | 5,26 | 5,51 |
+        | total |  |  | 5,51 |
+
+
+        | Total cargos del período| $34.248,03 |
+
+        | Detalle del Resumen de Cuenta | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Saldo Anterior |  |  | 36.580,72 |
+        | Crédito a favor |  |  |  |
+        | Nota de Crédito B : 2229-16722654 |  | -6.580,72 |  |
+        | Subtotal |  |  | -6.580,72 |
+
+
+        | Total a Pagar | $64.248,03 |
+
+  - path_to_gcs: gs://poc-genai/few_shot_examples/773_period_details.png
+    parsed_text_uri: gs://poc-genai/few_shot_examples/773_output.json
+    output:
+      text: |
+        | PLANES Y SERVICIOS 12/05 al 11/06 | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Descuento Empleado | 0,00 | 14.845,51 | -14.845,51 |
+        | Movistar Móvil 6GB (El plan incluye servicio de datos por $ 20305,22 s/imp) | 24.742,51 |  | 24.742,51 |
+        | total | 24.742,51 | 14.845,51 | 9.897,00 |
+
+
+        | CONSUMOS VARIABLES AL 11/05 | CANTIDAD | DURACION TASADA | IMPORTE | BONIFICACION | TOTAL CON IVA |
+        | Llamadas |  |  |  |  |  |
+        | Minutos incluidas multidestino |  | 003:00 | 0,00 |  | 0,00 |
+        | Minutos incluidas comunidad |  | 010:00 | 0,00 |  | 0,00 |
+        | Minutos excedentes sin cargo |  | 002:00 | 0,00 |  | 0,00 |
+        | Minutos a 0800/0810 y asteriscos |  | 002:00 | 0,74 |  | 0,74 |
+        | Internet |  |  |  |  |  |
+        | Internet Incluido- en GB | 3,742 |  | 0,00 |  | 0,00 |
+        | Internet sin cargo - en GB | 0,000 |  | 0,00 |  | 0,00 |
+        | total | | | 0,74 | | 0,74 |
+
+
+        | IMPUESTOS | IMPORTE | BONIFICACION | TOTAL |
+        | Ley 27.430 Impuestos Internos 5,2631%|  | 5,26 | 3,05 |
+        | total |  |  | 3,05 |
+
+
+        | Total cargos del período| $9.900,79 |
+
+
+        | Total a Pagar | $9.900,79 |
+
+  - path_to_gcs: gs://poc-genai/few_shot_examples/694_period_details.png
+    parsed_text_uri: gs://poc-genai/few_shot_examples/694_output.json
+    output:
+      text: |
+        | Cargos del Periodo | TOTAL |
+        | Plan Movistar | 16.739,98 |
+        | Servicios Digitales | 2.240,00 |
+        | Adicionales Movistar TV | 15.196,52 |
+        | Total Cargos del Período | $34.176,50 |
+
+
+        | Detalle del Resumen de Cuenta | BONIFICACION | TOTAL |
+        | Saldo Anterior |  | 31.498,7 |
+        | Pagos |  |  |
+        | Pago 02/05/2024 | -21.498,74 |  |
+        | Subtotal |  | -21.498,74 |
+        | Crédito a favor |  |  |
+        | Nota de Crédito B : 3177-00561288 |  | 10.000,00 |
+        | Subtotal |  | 10.000,00 |
+
+
+        | Total a Pagar  | $34.176,50 |
+
+  - path_to_gcs: gs://poc-genai/few_shot_examples/592_period_details.png
+    parsed_text_uri: gs://poc-genai/few_shot_examples/592_output.json
+    output:
+      text: |
+        | Cargos del Periodo | TOTAL |
+        | Plan Movistar | 11.315,99 |
+        | Servicios Digitales | 0,00 |
+        | Total Cargos del Período | $11.315,99 |
+
+
+        | Detalle del Resumen de Cuenta | BONIFICACION | TOTAL |
+        | Saldo Anterior |  | 16.164,9 |
+        | Pagos |  |  |
+        | Pago 09/04/2024 | -16.164,95 |  |
+        | Subtotal |  | -16.164,95 |
+        | Crédito a favor |  |  |
+        | Ajuste | -158,26 |  |
+        | Ajuste | -182,28 |  |
+        | Ajuste | -21,97 |  |
+        | Subtotal |  | -362,51 |
+        | Total a Pagar  | $10.953,48 |

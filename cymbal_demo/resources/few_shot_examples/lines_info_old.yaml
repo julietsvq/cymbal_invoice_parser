@@ -1,0 +1,7 @@
+examples:
+  - output: 
+      text: |
+        | Numero de Linea | Plan Contratado | Totales c/ impuestos |
+        | 1 | Movistar 6GB | $13.345,2 |
+        | 2 | Movistar 3GB | $13.345,1 |
+        | Total Factura Actual | | $45,90 |

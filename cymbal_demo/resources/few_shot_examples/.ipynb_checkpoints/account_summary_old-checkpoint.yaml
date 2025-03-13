@@ -1,0 +1,26 @@
+examples:
+  - output: 
+      json:
+        date: "05/08/2024"
+        items:
+            - item_name: "Saldo Anterior"
+              amount: 22
+              sign: ""
+            - item_name: "Pagos"
+              amount: 1
+              sign: "-"
+            - item_name: "Créditos"
+              amount: 2
+              sign: "-"
+            - item_name: "Otros Comprobantes"
+              amount: 33
+              sign: "+"
+            - item_name: "Cobro por Cuenta y Orden de Terceros"
+              amount: 5
+              sign: "+"
+            - item_name: "Cargos del Período"
+              amount: 6
+              sign: "+"
+            - item_name: "Total a Pagar"
+              amount: 8
+              sign: "="

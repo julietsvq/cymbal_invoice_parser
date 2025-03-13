@@ -1,0 +1,28 @@
+environment:
+  project_id: jmoreirodemos-347811
+  region: us-central1
+
+models:
+  gemini-flash: gemini-1.5-flash-001
+  embedding: text-embedding-004
+  max_output_tokens: 8192
+  temperature: 0
+
+#knowledge_base:
+#  region: europe-west4
+#  dataset: bills_knowledge_base
+#  table: kb_ar
+
+#explanation_chain:
+# use_few_shot_examples: False
+
+ocr:
+  use_cached: True
+  cropping:
+    section_infos:
+      - title: invoice_details
+        start_text: Factura
+        end_text: Próximo Vencimiento Estimado
+
+  ocr_chain_func:
+    invoice_details: invoice_details_chain

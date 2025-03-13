@@ -1,0 +1,340 @@
+[
+    {
+        "path": "/home/jupyter/cymbal_invoice_parser/cymbal_demo/resources/sample_invoices/invoice_images_output/sample_phone_invoice2_invoice_details.png",
+        "image_extracted": true,
+        "section_info": {
+            "title": "invoice_details",
+            "start_text": "Factura",
+            "end_text": "Pr\u00f3ximo Vencimiento Estimado"
+        },
+        "pdf_info": {
+            "pages": 3,
+            "start_found": true,
+            "end_found": true,
+            "start_in_page": 1,
+            "end_in_page": 1,
+            "start_coordinates": {
+                "left": 376.8,
+                "bottom": 753.111,
+                "right": 461.22,
+                "top": 795.9440000000001,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "end_coordinates": {
+                "left": 376.8,
+                "bottom": 657.591,
+                "right": 527.2940000000001,
+                "top": 664.591,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "rect_coordinates": [
+                {
+                    "page": 1,
+                    "x0": 376.8,
+                    "y0": 68.05599999999993,
+                    "x1": 612,
+                    "y1": 206.409
+                }
+            ],
+            "continue_coordinates": []
+        },
+        "filtered_elements": [
+            [
+                "Factura\nFecha de emisi\u00f3n:\nC.U.I.T:\nIngresos Brutos Conv Mult:\nInicio de Actividades:\n",
+                "Total a Pagar:\nVencimiento:\n",
+                "3108-00627558\n28/05/2024\n30-67881435-7\n9011784254\n01/01/2024\n",
+                "$17.904,02\n10/06/2024\n",
+                "Servicio de internet\nCliente N\u00ba: 326250439\nCuenta N\u00ba/ Clave de adhesi\u00f3n al d\u00e9bito autom\u00e1tico: 557535477\nC\u00f3digo de pago electr\u00f3nico Link/ Banelco: 0530557535477\n",
+                "IVA - Cons. Final - Documento Nacional Identidad: 24460221\n",
+                "Pr\u00f3ximo Vencimiento Estimado  10/07/2024\n",
+                " \n",
+                " \n",
+                " \n",
+                " \n"
+            ]
+        ]
+    },
+    {
+        "path": "/home/jupyter/cymbal_invoice_parser/cymbal_demo/resources/sample_invoices/invoice_images_output/sample_phone_invoice2_account_summary.png",
+        "image_extracted": true,
+        "section_info": {
+            "title": "account_summary",
+            "start_after_page": 0,
+            "start_text": "Resumen de cuenta",
+            "end_text": "Cargos del Periodo",
+            "include_end_box": false,
+            "bottom_offset": -25
+        },
+        "pdf_info": {
+            "pages": 3,
+            "start_found": true,
+            "end_found": true,
+            "start_in_page": 1,
+            "end_in_page": 1,
+            "start_coordinates": {
+                "left": 42.48,
+                "bottom": 637.7040000000001,
+                "right": 167.00000000000003,
+                "top": 645.7040000000001,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "end_coordinates": {
+                "left": 212.4,
+                "bottom": 555.93,
+                "right": 304.09000000000003,
+                "top": 578.89,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "rect_coordinates": [
+                {
+                    "page": 1,
+                    "x0": 42.48,
+                    "y0": 218.29599999999994,
+                    "x1": 612,
+                    "y1": 260.11
+                }
+            ],
+            "continue_coordinates": []
+        },
+        "filtered_elements": [
+            [
+                "Resumen de cuenta al 27/05/2024 \n",
+                "Saldo Anterior\n",
+                "$962,73 \n",
+                "-\n",
+                "Pagos\n",
+                "$0,00 \n",
+                "-\n",
+                "Cr\u00e9ditos\n",
+                "Otros Comprobantes\n",
+                "Cobro por Cuenta y \nOrden de Terceros\n",
+                "Cargos del Per\u00edodo\n",
+                "Total a Pagar\n",
+                "$962,73 \n",
+                "+\n",
+                "$0,00 \n",
+                "+\n",
+                "$0,00 \n",
+                "+\n",
+                "$17.904,02 \n",
+                "=\n",
+                "$17.904,02 \n",
+                " \n"
+            ]
+        ]
+    },
+    {
+        "path": "/home/jupyter/cymbal_invoice_parser/cymbal_demo/resources/sample_invoices/invoice_images_output/sample_phone_invoice2_period_details.png",
+        "image_extracted": true,
+        "section_info": {
+            "title": "period_details",
+            "start_text": "Cargos del Periodo",
+            "end_text": "Total a Pagar",
+            "continue_prompt": "Contin\u00faa Pr\u00f3xima Hoja",
+            "header_height_to_remove_for_middle_pages": 65
+        },
+        "pdf_info": {
+            "pages": 3,
+            "start_found": true,
+            "end_found": true,
+            "start_in_page": 1,
+            "end_in_page": 2,
+            "start_coordinates": {
+                "left": 212.4,
+                "bottom": 555.93,
+                "right": 304.09000000000003,
+                "top": 578.89,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "end_coordinates": {
+                "left": 213.36,
+                "bottom": 696.3299999999999,
+                "right": 276.16,
+                "top": 706.3299999999999,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "rect_coordinates": [
+                {
+                    "page": 1,
+                    "x0": 212.4,
+                    "y0": 285.11,
+                    "x1": 612,
+                    "y1": 545.2090000000001
+                },
+                {
+                    "page": 2,
+                    "x0": 212.4,
+                    "y0": 65,
+                    "x1": 612,
+                    "y1": 167.67000000000007
+                }
+            ],
+            "continue_coordinates": [
+                {
+                    "page": 1,
+                    "left": 509.04,
+                    "bottom": 310.791,
+                    "right": 581.0070000000001,
+                    "top": 329.05
+                }
+            ]
+        },
+        "filtered_elements": [
+            [
+                "Cargos del Periodo\nPlan Movistar \n",
+                "PLANES Y SERVICIOS  28/04 al 27/05\n",
+                "Plan Movistar\nBonificaci\u00f3n Plan Movistar\nMovistar TV Digital Combo+\nBonificaci\u00f3n Movistar con Todo\n",
+                "CARGOS PROPORCIONALES  \n",
+                "Bonificaci\u00f3n Movistar TV Combo+  por 2\nmeses\n",
+                "Adicionales Movistar TV \n",
+                "PLANES Y SERVICIOS  28/04 al 27/05\n",
+                "Prime\nHBO\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\n",
+                ".\nh\n",
+                ".\nh\n",
+                "IMPORTE BONIFICACION\n",
+                ".\n",
+                "22.299,00\n0,00\n7.949,99\n0,00\n30.248,99\n",
+                ".\n",
+                "15.000,01\n",
+                "999,99\n16.000,00\n",
+                "PERIODO\n",
+                "IMPORTE BONIFICACION\n",
+                "TOTAL \nCON IVA\n22.299,00\n-15.000,01\n7.949,99\n-999,99\n14.248,99\n",
+                "TOTAL \nCON IVA\n-2.384,99\n",
+                "28/04 al 06/05\n",
+                "0,00\n",
+                "0,00\n",
+                "2.384,99\n",
+                "2.384,99\n",
+                "-2.384,99\n",
+                "IMPORTE BONIFICACION\n",
+                "2.540,03\n3.499,99\n6.040,02\n",
+                "TOTAL  \n",
+                "CON IVA\n2.540,03\n3.499,99\n6.040,02\n",
+                "Total cargos del per\u00edodo \n",
+                "$17.904,02\nContin\u00faa Pr\u00f3xima Hoja\n",
+                "   \n",
+                "   \n",
+                "Detalle del Resumen de Cuenta\n",
+                "Saldo Anterior\n",
+                "Cr\u00e9dito a favor\nNota de Cr\u00e9dito B  : 3177-00596027\nSubtotal\n",
+                "Total a Pagar\n",
+                "-962,73\n",
+                "962,73\n",
+                "-962,73\n",
+                "$17.904,02\nC.A.E.: 74227650382962 \nFecha de Vto: 07/06/2024 \nORIGINAL\n"
+            ]
+        ]
+    },
+    {
+        "path": "/home/jupyter/cymbal_invoice_parser/cymbal_demo/resources/sample_invoices/invoice_images_output/sample_phone_invoice2_important_information.png",
+        "image_extracted": true,
+        "section_info": {
+            "title": "important_information",
+            "start_text": "Resumen de cuenta al",
+            "use_static_width_from_start_x": 165,
+            "use_static_height_from_start_x": 370,
+            "header_height_to_remove_for_middle_pages": 70,
+            "top_offset": 60,
+            "left_offset": -5
+        },
+        "pdf_info": {
+            "pages": 3,
+            "start_found": true,
+            "end_found": false,
+            "start_in_page": 1,
+            "end_in_page": 0,
+            "start_coordinates": {
+                "left": 42.48,
+                "bottom": 637.7040000000001,
+                "right": 167.00000000000003,
+                "top": 645.7040000000001,
+                "page_width": 612,
+                "page_height": 864
+            },
+            "end_coordinates": {},
+            "rect_coordinates": [
+                {
+                    "page": 1,
+                    "x0": 37.48,
+                    "y0": 278.29599999999994,
+                    "x1": 207.48,
+                    "y1": 596.2959999999999
+                }
+            ],
+            "continue_coordinates": []
+        },
+        "filtered_elements": [
+            [
+                "Te informamos que a partir del 1/6/24 el\nprecio de lista de tu servicio se \nincrementar\u00e1 hasta un 8,2%. \nSi ten\u00e9s bonificaciones, se mantienen \nigual por el plazo acordado. \nSi no estas de acuerdo con el cambio\ninformado, podemos buscar un plan que se\nadapte a tus necesidades, o podes rescindir\nel contrato sin cargo. \nLas llamadas internacionales modifican su\nprecio por minuto: EEUU, Espa\u00f1a, Peru,\nUruguay, Paraguay, Chile y Brasil tendr\u00e1n un\nvalor de $219,06 Cuba, Senegal e Inmarsat\ntendr\u00e1n un valor de $2157,11 y resto del\nMundo el valor de $310,49\n"
+            ]
+        ]
+    },
+    {
+        "path": "/home/jupyter/cymbal_invoice_parser/cymbal_demo/resources/sample_invoices/invoice_images_output/sample_phone_invoice2_other_details.png",
+        "image_extracted": false,
+        "section_info": {
+            "title": "other_details",
+            "start_after_page": 2,
+            "start_text": "OTROS CARGOS",
+            "end_text": "OTROS CARGOS"
+        },
+        "pdf_info": {
+            "pages": 3,
+            "start_found": false,
+            "end_found": false,
+            "start_in_page": 0,
+            "end_in_page": 0,
+            "start_coordinates": {},
+            "end_coordinates": {},
+            "rect_coordinates": [],
+            "continue_coordinates": []
+        },
+        "filtered_elements": [
+            []
+        ]
+    },
+    {
+        "path": "/home/jupyter/cymbal_invoice_parser/cymbal_demo/resources/sample_invoices/invoice_images_output/sample_phone_invoice2_lines_info.png",
+        "image_extracted": false,
+        "section_info": {
+            "title": "lines_info",
+            "start_text": "Numero de",
+            "end_text": "Total"
+        },
+        "pdf_info": {
+            "pages": 3,
+            "start_found": false,
+            "end_found": false,
+            "start_in_page": 0,
+            "end_in_page": 0,
+            "start_coordinates": {},
+            "end_coordinates": {},
+            "rect_coordinates": [],
+            "continue_coordinates": []
+        },
+        "filtered_elements": [
+            []
+        ]
+    }
+]
