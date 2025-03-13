@@ -24,48 +24,5 @@ ocr:
         start_text: Factura
         end_text: Próximo Vencimiento Estimado
 
-      - title: account_summary
-        start_after_page: 0
-        start_text: Resumen de cuenta
-        end_text: Cargos del Periodo
-        include_end_box: False
-        bottom_offset: -25
-
-      - title: period_details
-        start_text: Cargos del Periodo
-        end_text: Total a Pagar
-        continue_prompt: Continúa Próxima Hoja
-        header_height_to_remove_for_middle_pages: 65
-
-      - title: important_information
-        start_text: Resumen de cuenta al
-        use_static_width_from_start_x: 165
-        use_static_height_from_start_x: 370
-        header_height_to_remove_for_middle_pages: 70
-        top_offset: 60
-        left_offset: -5
-
-      - title: other_details
-        start_after_page: 2
-        start_text: OTROS CARGOS
-        end_text: OTROS CARGOS
-
-      - title: plan_page
-        start_after_page: 2
-        start_text: INCLUYE
-        fetch_all_pages_including: True
-        top_offset: 65
-        bottom_offset: -350
-
-      - title: lines_info
-        start_text: Numero de
-        end_text: Total
-
   ocr_chain_func:
     invoice_details: invoice_details_chain
-    account_summary: account_summary_chain
-    important_information: important_information_chain
-    other_details: other_details_chain
-    lines_info: lines_info_chain
-    plan_page: plan_page_chain
-    period_details: period_details_chain

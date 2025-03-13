@@ -1,4 +1,4 @@
-__all__ = ['show_images_in_grid']  # Specifies the function to be publicly accessible from this module.
+__all__ = ['show_images_in_grid', 'convert_dict_to_text']  # Specifies the function to be publicly accessible from this module.
 
 import matplotlib.pyplot as plt
 from matplotlib import gridspec

@@ -6,3 +6,4 @@ PyMuPDPyMuPDF
 matplotlib
 opencvopencv-python
 googlegoogle-cloud-storage
+langchain_google_vertexai  
