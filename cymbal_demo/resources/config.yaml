@@ -21,8 +21,8 @@ ocr:
   cropping:
     section_infos:
       - title: invoice_details
-        start_text: Factura
-        end_text: Próximo Vencimiento Estimado
+        start_text: Invoice
+        end_text: Billing period
 
   ocr_chain_func:
     invoice_details: invoice_details_chain

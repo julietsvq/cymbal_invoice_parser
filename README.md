@@ -1,9 +1,6 @@
-Install the following dependencies in your environment:  
-pdfminer.six  
-langchain_core  
-fitz  
-PyMuPDPyMuPDF  
-matplotlib  
-opencvopencv-python  
-googlegoogle-cloud-storage  
-langchain_google_vertexai  
+pip install pdfminer
+pip install pdfminer.six
+pip install tools
+pip install opencv-python
+pip install PyMuPDF
+pip install frontend

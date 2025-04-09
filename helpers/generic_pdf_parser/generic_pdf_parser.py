@@ -119,6 +119,7 @@ def _get_pdf_info(pages,
                     end_text = None, 
                     continue_prompt = None,
                     start_after_page = 0):
+
     """
     Extracts key information about a section within a PDF document.
 
@@ -146,7 +147,6 @@ def _get_pdf_info(pages,
             - "continue_coordinates": A list of dictionaries, each containing coordinates of "continue" prompts.
             - "all_components": A list of text components encountered between the start and end markers (if found).
     """
-    
     pdf_info = {
         "pages": 0,
         "start_found": False,
@@ -168,38 +168,40 @@ def _get_pdf_info(pages,
         pdf_info["pages"] = page_layout.pageid
         for element in page_layout:
             if hasattr(element, 'get_text'):
-                if (not pdf_info["start_found"] and start_text in element.get_text()):
-                    pdf_info["start_found"] = True
-                    pdf_info["start_in_page"] = page_layout.pageid
-                    pdf_info["start_coordinates"]["left"] = element.x0
-                    pdf_info["start_coordinates"]["bottom"] = element.y0
-                    pdf_info["start_coordinates"]["right"] = element.x1
-                    pdf_info["start_coordinates"]["top"] = element.y1
-                    pdf_info["start_coordinates"]["page_width"] = page_layout.width
-                    pdf_info["start_coordinates"]["page_height"] = page_layout.height       
-                    
-                elif (end_text and pdf_info["start_found"] and (not pdf_info["end_found"]) and (end_text in element.get_text())):
-                    pdf_info["end_found"] = True
-                    pdf_info["end_in_page"] = page_layout.pageid
-                    pdf_info["end_coordinates"]["left"] = element.x0
-                    pdf_info["end_coordinates"]["bottom"] = element.y0
-                    pdf_info["end_coordinates"]["right"] = element.x1
-                    pdf_info["end_coordinates"]["top"] = element.y1
-                    pdf_info["end_coordinates"]["page_width"] = page_layout.width
-                    pdf_info["end_coordinates"]["page_height"] = page_layout.height      
+                for text_line in element: 
+                    if hasattr(text_line, 'get_text'):
+                        if (not pdf_info["start_found"] and start_text in text_line.get_text()):
+                            pdf_info["start_found"] = True
+                            pdf_info["start_in_page"] = page_layout.pageid
+                            pdf_info["start_coordinates"]["left"] = element.x0
+                            pdf_info["start_coordinates"]["bottom"] = element.y0
+                            pdf_info["start_coordinates"]["right"] = element.x1
+                            pdf_info["start_coordinates"]["top"] = element.y1
+                            pdf_info["start_coordinates"]["page_width"] = page_layout.width
+                            pdf_info["start_coordinates"]["page_height"] = page_layout.height       
 
-                elif (continue_prompt and pdf_info["start_found"] and not pdf_info["end_found"] and continue_prompt in element.get_text()):
-                    temp_cont_coordinates = {}
-                    temp_cont_coordinates["page"] = page_layout.pageid
-                    temp_cont_coordinates["left"] = element.x0
-                    temp_cont_coordinates["bottom"] = element.y0
-                    temp_cont_coordinates["right"] = element.x1
-                    temp_cont_coordinates["top"] = element.y1
-                    pdf_info["continue_coordinates"].append(temp_cont_coordinates)
+                        elif (end_text and pdf_info["start_found"] and (not pdf_info["end_found"]) and (end_text in text_line.get_text())):
+                            pdf_info["end_found"] = True
+                            pdf_info["end_in_page"] = page_layout.pageid
+                            pdf_info["end_coordinates"]["left"] = element.x0
+                            pdf_info["end_coordinates"]["bottom"] = element.y0
+                            pdf_info["end_coordinates"]["right"] = element.x1
+                            pdf_info["end_coordinates"]["top"] = element.y1
+                            pdf_info["end_coordinates"]["page_width"] = page_layout.width
+                            pdf_info["end_coordinates"]["page_height"] = page_layout.height      
 
-                pdf_info["all_components"].append(element.get_text())
-                pdf_info["all_elements"].append({"element": element, "page": page_layout.pageid, "height": page_layout.height})
-    
+                        elif (continue_prompt and pdf_info["start_found"] and not pdf_info["end_found"] and continue_prompt in text_line.get_text()):
+                            temp_cont_coordinates = {}
+                            temp_cont_coordinates["page"] = page_layout.pageid
+                            temp_cont_coordinates["left"] = element.x0
+                            temp_cont_coordinates["bottom"] = element.y0
+                            temp_cont_coordinates["right"] = element.x1
+                            temp_cont_coordinates["top"] = element.y1
+                            pdf_info["continue_coordinates"].append(temp_cont_coordinates)
+
+                        pdf_info["all_components"].append(text_line.get_text())
+                        pdf_info["all_elements"].append({"element": element, "page": page_layout.pageid, "height": page_layout.height})
+
     return pdf_info
 
 def _find_rectangles_of_section(pdf_info,
@@ -250,6 +252,7 @@ def _find_rectangles_of_section(pdf_info,
             - "x0", "y0": Top-left coordinates.
             - "x1", "y1": Bottom-right coordinates.
     """
+
     #return the rectangle if the start and end pages are the same
     if pdf_info["start_found"] and ((pdf_info["end_found"] and pdf_info["start_in_page"] == pdf_info["end_in_page"]) or use_static_height_from_start_x):
         temp_rect_coordinates = {}
@@ -421,7 +424,6 @@ def _extract_pdf_rectangle(doc, local_temp_dir, output_image_path, rect_coordina
     Returns:
         True if the extraction and saving were successful, False otherwise.
     """
-
     first_page = doc[0]
     width = first_page.rect.width
     height = first_page.rect.height
@@ -530,6 +532,7 @@ def _rectangle_to_img(page, rect):
     pix = page.get_pixmap(clip=rect, matrix=fitz.Matrix(300/72, 300/72))
     # Convert the pixmap to a PIL Image
     img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+
     return img
 
 def _concat_images(image1, image2):
@@ -635,6 +638,7 @@ def _filter_elements_by_rectangle(all_elements, rect_coordinates):
 
     for rect in rect_coordinates:
         page_num = rect["page"]
+
         x0, y0, x1, y1 = rect["x0"], rect["y0"], rect["x1"], rect["y1"]
 
         # Get the page height directly from the element information
@@ -691,7 +695,7 @@ def create_images_from_pdf(pdf_path, section_infos, local_temp_dir=".tmp"):
     output_images = []
     
     pages, doc = _get_pages_and_doc(pdf_path) 
-
+    
     for section in section_infos:
         if not "fetch_all_pages_including" in section or not section["fetch_all_pages_including"]:
             pdf_info_parameters = copy.copy(section)
@@ -707,7 +711,7 @@ def create_images_from_pdf(pdf_path, section_infos, local_temp_dir=".tmp"):
             pdf_info_parameters.pop("left_offset", None)
             pdf_info_parameters.pop("right_offset", None)
             pdf_info_parameters.pop("fetch_all_pages_including", None)
-
+            
             pdf_info = _get_pdf_info(copy.copy(pages), **pdf_info_parameters)
 
             find_rectangle_parameters = copy.copy(section)
@@ -729,6 +733,7 @@ def create_images_from_pdf(pdf_path, section_infos, local_temp_dir=".tmp"):
                 rect_coordinates=rect_coordinates,
             )
             
+
             revised_elements_text = _filter_elements_by_rectangle(pdf_info["all_elements"], rect_coordinates)
             if "all_elements" in pdf_info:
                 del pdf_info["all_elements"]
